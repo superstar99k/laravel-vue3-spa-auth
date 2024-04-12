@@ -1,0 +1,50 @@
+{
+  "name": "grabook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host grabook.local --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest --environment jsdom --root src/",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint:dry": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@vee-validate/i18n": "^4.7.3",
+    "@vee-validate/rules": "^4.7.3",
+    "@vitejs/plugin-legacy": "^2.3.1",
+    "axios": "^1.2.1",
+    "bootstrap": "^5.2.3",
+    "camelcase": "^7.0.1",
+    "dayjs": "^1.11.6",
+    "decamelize": "^6.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier-vue": "^4.2.0",
+    "events": "^3.3.0",
+    "lodash.merge": "^4.6.2",
+    "qs": "^6.11.0",
+    "sass": "^1.56.1",
+    "v3-infinite-loading": "^1.2.2",
+    "vee-validate": "^4.7.3",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vicons/material": "^0.12.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "^2.2.4",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "jsdom": "^20.0.3",
+    "naive-ui": "^2.34.2",
+    "prettier": "^2.7.1",
+    "vfonts": "^0.0.3",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3"
+  }
+}

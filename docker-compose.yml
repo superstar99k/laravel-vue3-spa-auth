@@ -1,0 +1,41 @@
+version: '3'
+
+volumes:
+  client_node_modules:
+    driver: local
+  vscode_data_client:
+    driver: local
+  server_vendor:
+    driver: local
+  vscode_data_server:
+    driver: local
+  db:
+    driver: local
+  email:
+    driver: local
+
+services:
+  client:
+    extends:
+      file: docker-compose-client.yml
+      service: client
+
+  server:
+    extends:
+      file: docker-compose-server.yml
+      service: server
+
+  web:
+    extends:
+      file: docker-compose-mics.yml
+      service: web
+
+  db:
+    extends:
+      file: docker-compose-mics.yml
+      service: db
+
+  email:
+    extends:
+      file: docker-compose-mics.yml
+      service: email

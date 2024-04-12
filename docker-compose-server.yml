@@ -1,0 +1,19 @@
+version: '3'
+
+volumes:
+  server_vendor:
+    driver: local
+  vscode_data_server:
+    driver: local
+
+services:
+  server:
+    build: ./docker/server
+    container_name: "grabook_server"
+    volumes:
+      - ./src/server:/var/www/html:cached
+      - server_vendor:/var/www/html/vendor
+      - vscode_data_server:/root/.vscode-server
+    working_dir: /var/www/html
+    depends_on:
+      - db

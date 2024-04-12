@@ -1,0 +1,20 @@
+version: '3'
+
+volumes:
+  client_node_modules:
+    driver: local
+  vscode_data_client:
+    driver: local
+
+services:
+  client:
+    build: ./docker/client
+    container_name: "grabook_client"
+    volumes:
+      - ./src/client:/var/www/html:cached
+      - client_node_modules:/var/www/html/node_modules
+      - vscode_data_client:/root/.vscode-server
+    extra_hosts:
+      - "grabook.local:0.0.0.0"
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    working_dir: /var/www/html
